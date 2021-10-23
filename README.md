@@ -1,0 +1,2 @@
+# seed
+seed is a server that contains lists of IP addresses. This seed is simply a tcp server which randomly returns IP addresses connected to it. Most nodes use this seed to establish the first set of connections.
