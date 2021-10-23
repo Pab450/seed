@@ -27,6 +27,10 @@ const server: net.Server = net.createServer((socket: net.Socket) => {
         socket.write(addressList.slice(0, 20).join());
     });
 
+    socket.once("error", (error) => {
+        console.log(error);
+    });
+
     socket.once("close", () => {
         addressSet.delete(remoteAddress);
     });
